@@ -1,0 +1,150 @@
+:root {
+  --verde: #1f6f6b;
+  --tinta: #1b1c1f;
+  --fundo: #f3efe6;
+  --cartao: #fffdf8;
+  --borda: #e2dccd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--tinta);
+  background: var(--fundo);
+  line-height: 1.5;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  background: var(--verde);
+  color: #fff;
+}
+
+header p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+}
+
+main {
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+article {
+  padding: 20px;
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+}
+
+article h3 {
+  margin-top: 0;
+}
+
+button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--verde);
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin-top: 24px;
+}
+
+.formulario div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formulario label {
+  font-weight: 600;
+}
+
+.formulario input,
+.formulario select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  font: inherit;
+  background: var(--cartao);
+  color: var(--tinta);
+}
+
+.formulario input:focus,
+.formulario select:focus {
+  outline: 2px solid var(--verde);
+  outline-offset: 2px;
+}
+
+.formulario button {
+  align-self: flex-start;
+}
+
+/* Rodapé */
+footer {
+  padding: 16px 24px;
+  text-align: center;
+  color: var(--tinta);
+}
+
+@media (max-width: 700px) {
+  section {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    margin-left: 0;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .formulario {
+    max-width: 100%;
+  }
+
+  .formulario button {
+    width: 100%;
+  }
+}
